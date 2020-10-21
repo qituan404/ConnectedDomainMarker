@@ -4,7 +4,7 @@ using namespace cv;
 using namespace std;
 int main()
 {
-	Mat binaryMat, labelMat, stateMat, centerMat, resultMat;
+	Mat binaryMat, labelMat, stateMat, centerMat;
 	Mat srcMat = imread("0.jpg", 0);
 	threshold(srcMat, binaryMat, 100, 255, THRESH_BINARY);		//二值化算法
 	int Number = connectedComponentsWithStats(binaryMat, labelMat, stateMat, centerMat, 8, CV_32S);	//连通域标记函数
